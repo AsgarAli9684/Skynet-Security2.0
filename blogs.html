@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Skynet Security</title>
+  <meta name="description" content="Insights on zero trust, cloud security, and AI-driven threat intelligence from the Skynet Security team.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/icons/favicon.png">
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <img src="assets/icons/logo-icon.svg" alt="Skynet Security logo">
+        <span>SKYNET<small>SECURITY</small></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about-us.html">About Us</a>
+        <a href="blogs.html" class="is-active">Blogs</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-outline">Contact</a>
+        <a href="request-a-demo.html" class="btn btn-primary">Request a Demo</a>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Blogs</div>
+      <p class="eyebrow">Insights</p>
+      <h1>Notes from the frontline of enterprise security</h1>
+      <p>Research, product updates, and field notes on zero trust, cloud security, and AI-driven threat intelligence.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Featured post -->
+      <div class="blog-featured">
+        <div class="blog-thumb">
+          <img src="assets/images/AI-img.png" alt="Featured blog post cover placeholder">
+        </div>
+        <div class="blog-body">
+          <span class="blog-tag">THREAT INTELLIGENCE</span>
+          <h3 style="font-size:1.5rem;">How AI is changing the economics of cyberattacks</h3>
+          <p>A look at how automated tooling has lowered the cost of running large-scale attacks — and what that means for how enterprises should defend against them.</p>
+          <div class="blog-meta">
+            <span>By Skynet Research Team</span>
+            <span>June 12, 2026 · 7 min read</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div class="blog-filter">
+        <button class="is-active" data-filter="all">All</button>
+        <button data-filter="zero-trust">Zero Trust</button>
+        <button data-filter="cloud">Cloud Security</button>
+        <button data-filter="ai">AI &amp; Threat Intel</button>
+        <button data-filter="compliance">Compliance</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="blog-grid">
+
+        <a class="blog-card" data-category="zero-trust" href="#">
+          <div class="blog-thumb"><img src="assets/images/blog-post.jpg" alt="Blog post cover placeholder"></div>
+          <div class="blog-body">
+            <span class="blog-tag">ZERO TRUST</span>
+            <h3>Why VPNs are becoming a liability, not a safeguard</h3>
+            <div class="blog-meta"><span>Skynet Team</span><span>May 28, 2026</span></div>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="cloud" href="#">
+          <div class="blog-thumb"><img src="assets/images/blog-post.jpg" alt="Blog post cover placeholder"></div>
+          <div class="blog-body">
+            <span class="blog-tag">CLOUD SECURITY</span>
+            <h3>A practical checklist for multi-cloud posture management</h3>
+            <div class="blog-meta"><span>Skynet Team</span><span>May 19, 2026</span></div>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="ai" href="#">
+          <div class="blog-thumb"><img src="assets/images/blog-post.jpg" alt="Blog post cover placeholder"></div>
+          <div class="blog-body">
+            <span class="blog-tag">AI &amp; THREAT INTEL</span>
+            <h3>Inside the models that power real-time threat scoring</h3>
+            <div class="blog-meta"><span>Skynet Team</span><span>May 6, 2026</span></div>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="compliance" href="#">
+          <div class="blog-thumb"><img src="assets/images/blog-post.jpg" alt="Blog post cover placeholder"></div>
+          <div class="blog-body">
+            <span class="blog-tag">COMPLIANCE</span>
+            <h3>Turning audit season into a non-event</h3>
+            <div class="blog-meta"><span>Skynet Team</span><span>April 24, 2026</span></div>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="zero-trust" href="#">
+          <div class="blog-thumb"><img src="assets/images/blog-post.jpg" alt="Blog post cover placeholder"></div>
+          <div class="blog-body">
+            <span class="blog-tag">ZERO TRUST</span>
+            <h3>Micro-segmentation without the migration headache</h3>
+            <div class="blog-meta"><span>Skynet Team</span><span>April 15, 2026</span></div>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="cloud" href="#">
+          <div class="blog-thumb"><img src="assets/images/blog-post.jpg" alt="Blog post cover placeholder"></div>
+          <div class="blog-body">
+            <span class="blog-tag">CLOUD SECURITY</span>
+            <h3>What changes when your workloads move faster than your policies</h3>
+            <div class="blog-meta"><span>Skynet Team</span><span>April 2, 2026</span></div>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="pagination">
+        <a href="#" class="is-active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">&rsaquo;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="brand">
+            <img src="assets/icons/logo-icon.svg" alt="Skynet Security logo">
+            <span>SKYNET<small>SECURITY</small></span>
+          </a>
+          <p>Secure Today. Connect Tomorrow. An AI-powered, cloud-native security platform for the modern enterprise.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn"><img src="assets/icons/icon-linkedin.svg" alt=""></a>
+            <a href="#" aria-label="X / Twitter"><img src="assets/icons/icon-twitter.svg" alt=""></a>
+            <a href="#" aria-label="YouTube"><img src="assets/icons/icon-youtube.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="request-a-demo.html">Request a Demo</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Zero Trust Access</a></li>
+            <li><a href="services.html">Cloud Security</a></li>
+            <li><a href="services.html">Data Protection</a></li>
+            <li><a href="services.html">Threat Intelligence</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Skynet Security. All rights reserved.</p>
+        <div class="legal-inline">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top"><img src="assets/icons/icon-arrow-up.svg" alt=""></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
