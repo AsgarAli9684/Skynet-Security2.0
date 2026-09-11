@@ -372,6 +372,20 @@ p {
   gap: 16px;
   margin: 32px 0 40px;
 }
+@media (max-width: 768px) {
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+}
 .hero-meta {
   display: flex;
   gap: 36px;
@@ -1400,13 +1414,19 @@ p {
   .nav-actions .btn-outline {
     display: none;
   }
+  .nav-actions .btn-primary {
+    display: none;
+  }
   .nav-toggle {
     display: flex;
+  }
+  .mobile-demo-btn {
+    display: none;
   }
   .site-nav.nav-open .nav-links {
     display: flex;
     position: absolute;
-    top: var(--nav-h);
+    top: 100%;
     left: 0;
     right: 0;
     flex-direction: column;
@@ -1415,10 +1435,18 @@ p {
     background: rgba(11, 18, 32, 0.98);
     padding: 16px 24px 24px;
     border-bottom: 1px solid var(--border);
+    z-index: 1001;
   }
   .site-nav.nav-open .nav-links a {
     padding: 10px 0;
     width: 100%;
+  }
+  .site-nav.nav-open .nav-links .mobile-demo-btn {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+    color: var(--text);
   }
   .trust-strip {
     padding: 8px 0;
