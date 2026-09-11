@@ -220,28 +220,37 @@ p {
     background 0.25s ease,
     border-color 0.25s ease;
 }
+
 .site-nav.is-scrolled {
   background: rgba(11, 18, 32, 0.86);
   border-bottom-color: var(--border);
 }
+
 .site-nav .container {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 16px;
+  margin: 0 auto;
 }
+
+/* Logo */
 .brand {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
   font-family: var(--font-display2);
   font-size: 1.15rem;
   color: var(--text);
 }
+
 .brand img {
   height: 34px;
   width: 34px;
 }
+
 .brand small {
   display: block;
   font-family: var(--font-body);
@@ -250,43 +259,21 @@ p {
   color: var(--cyan);
   font-weight: 600;
 }
+
+/* Mobile menu */
 .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 34px;
+  display: none;
 }
-.nav-links a {
-  font-size: 0.94rem;
-  color: var(--text-muted);
-  position: relative;
-  padding: 6px 0;
-  transition: color 0.2s ease;
-}
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background: var(--grad-brand);
-  transition: width 0.2s ease;
-}
-.nav-links a:hover,
-.nav-links a.is-active {
-  color: var(--text);
-}
-.nav-links a:hover::after,
-.nav-links a.is-active::after {
-  width: 100%;
-}
+
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
+  margin-left: auto;
 }
+
 .nav-toggle {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 5px;
   width: 26px;
@@ -295,6 +282,7 @@ p {
   cursor: pointer;
   padding: 6px 0;
 }
+
 .nav-toggle span {
   height: 2px;
   width: 100%;
@@ -302,6 +290,37 @@ p {
   transition:
     transform 0.2s ease,
     opacity 0.2s ease;
+}
+
+
+/* =========================
+   Desktop
+   ========================= */
+@media (min-width: 769px) {
+
+  .site-nav .container {
+    gap: 24px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+    margin-left: auto;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-left: 40px;
+    flex-shrink: 0;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
 }
 
 /* ---------- Hero ---------- */
@@ -1410,6 +1429,9 @@ p {
 }
 
 @media (max-width: 760px) {
+  .site-nav .container {
+    gap: 12px;
+  }
   .nav-links,
   .nav-actions .btn-outline {
     display: none;
@@ -1417,8 +1439,12 @@ p {
   .nav-actions .btn-primary {
     display: none;
   }
+  .nav-actions {
+    margin-left: 0;
+  }
   .nav-toggle {
     display: flex;
+    margin-left: auto;
   }
   .mobile-demo-btn {
     display: none;
@@ -1436,6 +1462,8 @@ p {
     padding: 16px 24px 24px;
     border-bottom: 1px solid var(--border);
     z-index: 1001;
+    width: 100%;
+    box-sizing: border-box;
   }
   .site-nav.nav-open .nav-links a {
     padding: 10px 0;
