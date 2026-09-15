@@ -50,7 +50,7 @@ html {
 }
 body {
   margin: 0;
-  background: var(--bg);
+  background: var(--bg); 
   color: var(--text);
   font-family: var(--font-body);
   font-size: 16px;
@@ -211,13 +211,11 @@ p {
   position: fixed;
   inset: 0 0 auto;
   z-index: 1000;
-
   height: var(--nav-h);
-
   display: flex;
   align-items: center;
-
-  background: rgba(11, 18, 32, 0.35);
+  background: rgba(11, 18, 32, 0.35); 
+  background:transparent;
   border-bottom: 1px solid transparent;
   backdrop-filter: blur(10px);
 
@@ -229,7 +227,7 @@ p {
 /* Scrolled state */
 
 .site-nav.is-scrolled {
-  background: rgba(11, 18, 32, 0.86);
+  background: rgba(11, 18, 32, 0.644); 
   border-bottom-color: var(--border);
 }
 
@@ -248,20 +246,36 @@ p {
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   flex-shrink: 0;
   color: var(--text);
+  background-color: transparent;
   font-family: var(--font-display2);
-  font-size: 1.15rem;
   text-decoration: none;
 }
 
 .brand img {
-  width: 34px;
-  height: 34px;
-  object-fit: contain;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
 }
 
+/* Brand name wrapper */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* SKYNET SECURITY */
+.brand-name {
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+/* SECURITY */
 .brand small {
   display: block;
   color: var(--cyan);
@@ -269,6 +283,20 @@ p {
   font-size: 0.56rem;
   font-weight: 600;
   letter-spacing: 0.22em;
+  line-height: 1.2;
+}
+
+/* Tagline */
+.brand .tagline {
+  display: block;
+  margin-top: 5px;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.55rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -510,31 +538,35 @@ p {
 
 /* ---------- Trust strip ---------- */
 .trust-strip {
-  padding: 40px 0;
+  padding: 10px 0;
   border-bottom: 1px solid var(--border);
   border-top: 1px solid var(--border);
 }
 .trust-strip .container {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap:40px;
   flex-wrap: wrap;
 }
 .trust-strip .trust-label {
   font-size: 0.82rem;
   color: var(--text-dim);
   white-space: nowrap;
+  display: block;
+  margin-bottom: 30px;
 }
 .trust-logos {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   gap: 44px;
   flex: 1;
   flex-wrap: wrap;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 .trust-logos img {
-  height: 24px;
+  height: 50px;
+  padding-bottom: 10px;
 }
 
 /* ---------- Icon tiles / cards ---------- */
@@ -1619,6 +1651,7 @@ p {
 
   .trust-strip marquee {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 30px;
@@ -1628,6 +1661,7 @@ p {
   .trust-strip .trust-label {
     font-size: 0.68rem;
     white-space: nowrap;
+    margin-bottom: 40px;
   }
 
   .trust-logos {
