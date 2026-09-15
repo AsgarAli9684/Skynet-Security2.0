@@ -1229,8 +1229,11 @@ p {
 /* ---------- Contact ---------- */
 .contact-wrap {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 56px;
+}
+.contact-wrap > * {
+  min-width: 0;
 }
 .contact-info-card {
   display: flex;
@@ -1257,14 +1260,13 @@ p {
   margin-top: 28px;
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
-  aspect-ratio: 16/9;
-  background: var(--bg-panel-alt) url("../assets/images/map-placeholder.jpg")
-    center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: var(--text-dim);
   font-size: 0.85rem;
+}
+.map-frame iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* ---------- Forms ---------- */
@@ -1344,6 +1346,94 @@ p {
   background: rgba(0, 229, 255, 0.1);
   border: 1px solid rgba(0, 229, 255, 0.35);
   color: var(--cyan);
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 991.98px) {
+
+  .contact-wrap {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+
+  .form-card {
+    padding: 32px;
+  }
+
+  .map-frame iframe {
+    height: 320px;
+  }
+
+}
+/* ---------- Mobile ---------- */
+@media (max-width: 767.98px) {
+ 
+  .contact-wrap {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+  .contact-info-card {
+    gap: 12px;
+    padding: 16px 0;
+  }
+
+  .contact-info-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .contact-info-card p {
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+
+  .form-card {
+    padding: 24px 20px;
+    border-radius: var(--radius-md);
+  }
+
+  .form-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .form-group label {
+    font-size: 0.84rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px;
+    padding: 12px 14px;
+  }
+
+  .form-group textarea {
+    min-height: 130px;
+  }
+
+  .form-check {
+    font-size: 0.8rem;
+    gap: 8px;
+  }
+
+  .map-frame {
+    margin-top: 22px;
+  }
+
+  .map-frame iframe {
+    height: 280px;
+    width: 100%;
+  }
+
 }
 
 /* ---------- Demo page: benefits + logos ---------- */
@@ -1468,7 +1558,7 @@ p {
 /* ==========================================================================
    Responsive
    ========================================================================== */
-@media (max-width: 900px) {
+@media (max-width: 721px) {
 
   .stat-row {
     grid-template-columns: repeat(2, 1fr);
@@ -1493,7 +1583,6 @@ p {
     grid-template-columns: 1fr;
   }
   
-  .contact-wrap,
   .demo-wrap {
     grid-template-columns: 1fr;
   }
@@ -1550,9 +1639,6 @@ p {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .form-row {
-    grid-template-columns: 1fr;
-  }
 
   .cta-banner {
     padding: 36px;
