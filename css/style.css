@@ -1256,12 +1256,17 @@ p {
   margin-bottom: 0;
   font-size: 0.9rem;
 }
+.contact-info-card > div:last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
 .map-frame {
   margin-top: 28px;
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
   color: var(--text-dim);
   font-size: 0.85rem;
+  overflow: hidden;
 }
 .map-frame iframe {
   display: block;
@@ -1394,6 +1399,7 @@ p {
   .form-card {
     padding: 24px 20px;
     border-radius: var(--radius-md);
+    width: 100%;
   }
 
   .form-row {
