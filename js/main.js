@@ -84,10 +84,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   /* ---------------- Set active nav link based on current page ---------------- */
-  let path = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a').forEach(function (link) {
-    let href = link.getAttribute('href');
-    if (href === path) link.classList.add('is-active');
-  });
+    let path = window.location.pathname.split('/').pop();
+
+    // Treat the root URL as index.html
+    if (!path || path === '/') {
+      path = 'index.html';
+    }
+
+    document.querySelectorAll('.nav-links a').forEach(function (link) {
+      let href = link.getAttribute('href');
+
+      link.classList.toggle('is-active', href === path);
+    });
 
 });
