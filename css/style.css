@@ -532,6 +532,7 @@ p {
 
 /* ---------- Trust strip ---------- */
 .trust-strip {
+  background:#fffffffd;
   padding: 10px 0;
   border-bottom: 1px solid var(--border);
   border-top: 1px solid var(--border);
@@ -544,10 +545,10 @@ p {
 }
 .trust-strip .trust-label {
   font-size: 0.82rem;
-  color: var(--text-dim);
+  color:rgba(0, 0, 0, 0.7);
   white-space: nowrap;
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .trust-logos {
   display: flex;
@@ -559,7 +560,7 @@ p {
   opacity: 0.8;
 }
 .trust-logos img {
-  height: 50px;
+  height: 80px;
   padding-bottom: 10px;
 }
 
@@ -1622,7 +1623,7 @@ p {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 770px) {
   .service-detail {
     grid-template-columns: 1fr;
   }
@@ -1648,14 +1649,14 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    min-height: 36px;
+    min-height: 30px;
     width: 100vw;
   }
 
   .trust-strip .trust-label {
     font-size: 0.68rem;
     white-space: nowrap;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .trust-logos {
@@ -1664,7 +1665,7 @@ p {
   }
 
   .trust-logos img {
-    height: 30px;
+    height: 60px;
     flex-shrink: 0;
   }
 
